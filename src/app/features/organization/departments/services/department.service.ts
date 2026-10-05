@@ -12,18 +12,18 @@ export class DepartmentService {
 
   private readonly http = inject(HttpClient);
 
-  private readonly apiUrl =
-    `${environment.apiBaseUrl}/api/organization/departments`;
+  private readonly baseUrl =
+  `${environment.apiBaseUrl}/api/organization/departments`;
 
   getDepartments(): Observable<Department[]> {
-    return this.http.get<Department[]>(this.apiUrl);
+    return this.http.get<Department[]>(this.baseUrl);
   }
 
   getActiveDepartments(): Observable<Department[]> {
-    return this.http.get<Department[]>(`${this.apiUrl}/active`);
+    return this.http.get<Department[]>(`${this.baseUrl}/active`);
   }
 
   getDepartmentById(id: number): Observable<Department> {
-    return this.http.get<Department>(`${this.apiUrl}/${id}`);
+    return this.http.get<Department>(`${this.baseUrl}/${id}`);
   }
 }

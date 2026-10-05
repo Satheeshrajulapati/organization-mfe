@@ -16,11 +16,11 @@
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
-          "options": {
-            "styles": [
-              "@angular/material/prebuilt-themes/azure-blue.css"
-            ]
-          },
+					"options": {
+						"styles": [
+							"@angular/material/prebuilt-themes/azure-blue.css"
+						]
+					},
 					"configurations": {
 						"production": {
 							"target": "organization-mfe:esbuild:production"
@@ -60,9 +60,9 @@
 							}
 						],
 						"styles": [
-              "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.scss"
-            ],
+							"@angular/material/prebuilt-themes/azure-blue.css",
+							"src/styles.scss"
+						],
 						"scripts": []
 					}
 				},
